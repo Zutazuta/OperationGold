@@ -1,0 +1,48 @@
+User
+	Account Info
+		Class (User,admin,mod)
+		Username
+		Password (hashed)
+	
+	Personal Info
+		Location
+		Age
+		email
+		ESO2 Account
+	
+	Stats
+		Post Count
+		Recent Post List
+		Reply Posts
+
+Forum 
+	String Name;
+	List of Topics; (hashmap)
+	List of Forums;
+	Forum Parent;
+	
+Topic
+	String SubjectLine;
+	Int viewCount;
+	Forum thisForum;
+	ArrayList<Posts> postList;
+		
+ReplayTopic extends Topic
+	List[] ReplayFlatFile;
+
+Post
+	Date datePost;
+	User.Account Info.Username Poster;
+	Topic thisTopic;
+	String Contents;
+	
+		
+Bracket
+	List of Rounds
+		Player1
+		Player2
+		bWinner
+		iStatus
+		Link [schedule or result or livestream]
+		Match Number
+		Result
