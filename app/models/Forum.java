@@ -27,4 +27,28 @@ public class Forum extends Model
 		this.subForumList = new ArrayList<Forum>();
 	}
 	
+	public Topic newTopic(User by, String subject, String content)
+	{
+		Topic topic = new Topic(0, subject, this, by, content);
+		this.refresh();
+		return topic;
+	}
+	
+	public int getTopicsCount()
+	{
+		return topicList.size();
+	}
+	
+	public int getPostCount()
+	{
+		int count = 0;
+		
+		for(int i = 0; i<topicList.size(); i++)
+		{
+			count += topicList.get(i).getPostCount();
+		}
+		
+		return count;
+	}
+	
 }

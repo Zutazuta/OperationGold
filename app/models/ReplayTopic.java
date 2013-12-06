@@ -7,7 +7,7 @@ public class ReplayTopic extends Topic{
 	
 	public ReplayTopic(int topicID, String subjectLine, Forum thisForum, List<String> replayFiles)
 	{
-		super(topicID, subjectLine, thisForum);
+		super(topicID, subjectLine, thisForum, null, subjectLine);
 		this.replayFiles = replayFiles;
 	}
 	

@@ -12,16 +12,16 @@ public class Post extends Model
 	@Id
 	public int postID;
 	public Date postDate;
-	public User user;
-	public Topic thisTopic;
+	public User postedBy;
+	public Topic topic;
 	public String postContent;
 	
-	public Post(int postID, User user, Topic thisTopic, String postContent)
+	public Post(int postID, User postedBy, Topic topic, String postContent)
 	{
 		this.postID = postID;
 		this.postDate = new Date();
-		this.user = user;
-		this.thisTopic = thisTopic;
+		this.postedBy = postedBy;
+		this.topic = topic;
 		this.postContent = postContent;
 	}
 }
